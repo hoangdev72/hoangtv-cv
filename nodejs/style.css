@@ -1,6 +1,5 @@
 body{
   background-color: #D5D5D5;
-  font-family: system-ui;
 }
 .container{
   background-color: #E9E7EA;
@@ -10,9 +9,9 @@ body{
   padding:50px;
   box-shadow: 0 10px 50px #858585;
   display: grid;
- grid-template-columns: 35% 60%;
- column-gap: 5%; 
- row-gap: 30px;
+  grid-template-columns: 35% 60%;
+  column-gap: 5%; 
+  row-gap: 30px;
 }
 
 .avatar img{
