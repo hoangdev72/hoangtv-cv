@@ -19,17 +19,17 @@
          <h1>Trần Việt Hoàng</h1>
          <h2 class="">Ứng tuyển Nodejs Developer</h2>
          <ul class="contact">
-            <li>
-               <span><i class="fa-lg fa-solid fa-phone-volume"></i></span> 0374483346
+            <li class="tooltip">
+               <span><i class="fa-lg fa-solid fa-phone-volume"></i></span> <i class="click-copy">0374483346</i> <i class="tooltiptext">Click to copy</i>
             </li>
-            <li>
-               <span><i class="fa-lg fa-solid fa-envelope"></i></span> codyhoang.it@gmail.com
+            <li class="tooltip">
+               <span><i class="fa-lg fa-solid fa-envelope"></i></span> <i class="click-copy">codyhoang.it@gmail.com</i> <i class="tooltiptext">Click to copy</i>
             </li>
             <li>
                <span style="font-size: 17px">
                   <i class="fa-lg fa-brands fa-facebook"></i>
                </span>
-               <a style="color: black" href="https://www.facebook.com/hoangtv72/">facebook.com/hoangtv72/</a>
+               <a style="color: black" href="https://www.facebook.com/hoangtv72/"><i>facebook.com/hoangtv72/</i></a>
             </li>
          </ul>
       </div>
@@ -134,6 +134,26 @@
          </div>
       </div>
    </div>
+   <script>
+		let clickCopy = document.getElementsByClassName("click-copy");
+		for(let i = 0; i < clickCopy.length; i++) {
+			clickCopy[i].onclick = function(){copyToClipBoard(clickCopy[i])}
+		}
+
+		function copyToClipBoard(e) {
+			e.nextElementSibling.innerHTML = `Copied ${e.innerHTML}`
+			navigator.clipboard.writeText(e.innerHTML)
+
+			let tooltiptext = document.getElementsByClassName("tooltiptext")
+
+			for(let i = 0; i < tooltiptext.length; i++) {
+				if (e.nextElementSibling !== tooltiptext[i]) {
+					tooltiptext[i].innerHTML = "Click to coppy"
+				}
+			}
+		}
+   </script>
+      
 </body>
 
 </html>

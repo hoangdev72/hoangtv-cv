@@ -49,6 +49,7 @@ body {
 .name .contact {
   padding: 0;
   list-style: none;
+  cursor: pointer;
 }
 
 .name .contact span {
@@ -151,4 +152,21 @@ h2 {
 
 .mb-5 {
   margin-bottom: 5px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  text-align: center;
+  padding: 2px 7px;
+  position: absolute;
+  top: -16px;
+  margin-left: 4px;
+  border-radius: 10px 0px 10px 0px;
+  -webkit-border-radius: 10px 0px 10px 0px;
+  -moz-border-radius: 10px 0px 10px 0px;
+  box-shadow: 0 1px 5px #858585;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
